@@ -10,14 +10,18 @@
     <form id="form1" runat="server">
     <div>
     
-    	<asp:GridView ID="GridView1" runat="server" AllowPaging="True" PageSize="3">
+    	<br />
+		使用DataSource搭配AllowPaging跟PageIndexChanging作到分頁效果<br />
+		<br />
+    
+    	<asp:GridView ID="GridView1" runat="server" AllowPaging="True" PageSize="3" OnPageIndexChanging="GridView1_PageIndexChanging">
 		</asp:GridView>
     
     </div>
     	<p>
 			&nbsp;</p>
 		<p>
-			&nbsp;</p>
+			使用LocalDB搭配DataSourceID跟AllowPaging作到分頁效果</p>
 		<asp:GridView ID="GridView2" runat="server" DataSourceID="SqlDataSource1" AutoGenerateColumns="False" AllowPaging="True" PageSize="3">
 			<Columns>
 				<asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
